@@ -1,8 +1,6 @@
 interface Sortable {
   length: number;
-
   compare(index: number): boolean;
-
   swap(index: number): void;
 }
 
