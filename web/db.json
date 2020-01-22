@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Veratyr",
+      "age": 5000
+    },
+    {
+      "name": "Gandalf",
+      "age": 500,
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ]
+}
