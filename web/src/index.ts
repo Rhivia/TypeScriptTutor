@@ -1,7 +1,21 @@
-import { UserForm } from './views/UserForm';
+import { UserList } from "./views/UserList";
+import { Collection } from "./models/Collection";
+import { User, UserProps } from "./models/User";
 
-const userForm = new UserForm(
-  document.getElementById('root')
+const rootUrl = 'http://localhost:3000';
+
+const users = new Collection(
+  `${rootUrl}/users`,
+  (json: UserProps) => {
+    return User.buildUser(json);
+  }
 );
 
-userForm.render();
+users.on('change', () => {
+  const root = document.getElementById('root');
+  if (root) {
+    new UserList(root, users).render();
+  }
+});
+
+users.fetch();
