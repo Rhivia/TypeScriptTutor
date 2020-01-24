@@ -11,6 +11,7 @@ var app = express_1.default();
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use(cookie_session_1.default({ keys: ['KEY_STRING'] }));
 app.use(loginRoutes_1.router);
-app.listen(3000, function () {
-    console.log('Listening on port 3000');
+var port = 3000;
+app.listen(port, function () {
+    console.log("Listening on port " + port);
 });
