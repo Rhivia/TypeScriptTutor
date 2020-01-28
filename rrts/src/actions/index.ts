@@ -4,7 +4,7 @@ import { ActionTypes } from "./types";
 
 export interface Todo {
   id: number;
-  type: string;
+  title: string;
   completed: boolean;
 };
 
